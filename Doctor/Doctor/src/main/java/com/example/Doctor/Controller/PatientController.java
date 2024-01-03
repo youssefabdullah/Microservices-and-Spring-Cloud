@@ -14,4 +14,8 @@ public class PatientController {
     public String gettPatient(@PathVariable("name") String name){
         return service.getPatient(name);
     }
+    @GetMapping("/doctor/gettPatientFeign/{name}")
+    public String gettPatientFeign(@PathVariable("name") String name){
+        return service.getPatientByFeifn(name);
+    }
 }
